@@ -1,0 +1,157 @@
+<html>
+	<head>
+		<title> Proyecto Horario </title>
+		<meta  chartset="UTF-8">
+		
+		<!--Link al archivo de css llamado estilo.css , estilo del horario-->
+		<link rel="stylesheet" href="estilo.css">
+
+		<!--Link al archivo de javascript llamado script.js , funciones del horario-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+		<script src="sketch.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		
+
+	</head>
+	
+	
+	<!--Empieza HTML-->
+	<body onload="fecha()">
+	<div>
+			<table style="margin:auto">
+				<tr>
+					<td class="Fisica"><button onclick="fisica()">Fisica</button></td>
+				</tr>
+				<tr>
+					<td class="Mate"><button onclick="mate()">Matemáticas</button></td>
+				</tr>
+				<tr>
+					<td class="Lengua"><button onclick="lengua()">Lengua</button></td>
+				</tr>
+				<tr>
+					<td class="TI"><button onclick="ti()">TI</button></td>
+				</tr>
+				<tr>
+					<td class="Ingles"><button onclick="ingles()">Inglés</button></td>
+				</tr>
+				<tr>
+					<td class="Dibujo"><button onclick="dibujo()">Dibujo</button></td>
+				</tr>
+				<tr>
+					<td class="TIC"><button onclick="tic()">TIC</button></td>
+				</tr>
+				<tr>
+					<td class="Historia"><button onclick="historia()">Historia</button></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<br>
+		<h2> 2ºBACH B </h2>
+		<div>
+			<table style="margin:auto">
+				<tr class="dias">
+					<td id="1">Lunes</td>
+					<td id="2">Martes </td>
+					<td id="3">Miercoles </td>
+					<td id="4">Jueves</td>
+					<td id="5">Viernes</td>
+				</tr>
+				<tr>
+					<td id="Fisica" class="Fisica" onclick="cambiar('h1')">Fisica <span id="h1">[o]</span></td>
+					<td id="Mate"  class="Mate" onclick="cambiar('h2')">Matemáticas <span id="h2">[o]</span></td>
+					<td id="Lengua"  class="Lengua" onclick="cambiar('h3')">Lengua <span id="h3">[o]</span></td>
+					<td id="Mate1"  class="Mate" onclick="cambiar('h4')">Matemáticas <span id="h4">[o]</span></td>
+					<td id="TI"  class="TI" onclick="cambiar('h5')">TI <span id="h5">[o]</span></td>
+				</tr>
+				<tr>
+					<td id="TI1"  class="TI" onclick="cambiar('h6')">TI <span id="h6">[o]</span></td>
+					<td id="Ingles"  class="Ingles" onclick="cambiar('h7')">Inglés <span id="h7">[o]</span></td>
+					<td id="TI2"  class="TI" onclick="cambiar('h8')">TI <span id="h8">[o]</span></td>
+					<td id="Dibujo"  class="Dibujo" onclick="cambiar('h9')">Dibujo <span id="h9">[o]</span></td>
+					<td id="Ingles1"  class="Ingles" onclick="cambiar('h10')">Inglés <span id="h10">[o]</span></td>
+				</tr>
+				<tr>
+					<td id="Mate2"  class="Mate" onclick="cambiar('h11')">Matemáticas <span id="h11">[o]</span></td>
+					<td id="Dibujo1"  class="Dibujo" onclick="cambiar('h12')"> Dibujo <span id="h12">[o]</span></td>
+					<td id="Dibujo2"  class="Dibujo" onclick="cambiar('h13')"> Dibujo <span id="h13">[o]</span></td>
+					<td id="TI3"  class="TI" onclick="cambiar('h14')">TI <span id="h14">[o]</span></td>
+					<td id="Fisica1"  class="Fisica" onclick="cambiar('h15')">Física <span id="h15">[o]</span></td>
+				</tr>
+				<tr height= 20>
+					<td  class="recreo" colspan ="5">Recreo</td>
+					</tr>
+				<tr>
+					<td id="Lengua1"  class="Lengua" onclick="cambiar('h16')">Lengua <span id="h16">[o]</span></td>
+					<td id="Fisica2"  class="Fisica" onclick="cambiar('h17')"> Física <span id="h17">[o]</span></td>
+					<td id="TIC"  class="TIC" onclick="cambiar('h18')">TIC <span id="h18">[o]</span></td>
+					<td id="TIC1"  class="TIC" onclick="cambiar('h19')">TIC <span id="h19">[o]</span></td>
+					<td id="Lengua2"  class="Lengua" onclick="cambiar('h20')">Lengua <span id="h20">[o]</span></td>
+				</tr>
+				
+				<tr>
+					<td id="Historia"  class="Historia" onclick="cambiar('h21')">Historia <span id="h21">[o]</span></td>
+					<td id="Historia1"  class="Historia" onclick="cambiar('h22')">Historia <span id="h22">[o]</span></td>
+					<td id="Historia2"  class="Historia" onclick="cambiar('h23')">Historia <span id="h23">[o]</span></td>
+					<td id="Fisica3"  class="Fisica" onclick="cambiar('h24')">Física <span id="h24">[o]</span></td>
+					<td id="TIC2"  class="TIC" onclick="cambiar('h25')">TIC <span id="h25">[o]</span></td>
+				</tr>
+				<tr>
+					<td id="Ingles2"  class="Ingles" onclick="cambiar('h26')">Inglés <span id="h26">[o]</span></td>
+					<td id="Lengua3"  class="Lengua" onclick="cambiar('h27')">Lengua <span id="h27">[o]</span></td>
+					<td id="Mate3"  class="Mate" onclick="cambiar('h28')">Matemáticas <span id="h28">[o]</span></td>
+					<td id="Historia3"  class="Historia" onclick="cambiar('h29')">Historia <span id="h29">[o]</span></td>
+					<td id="Dibujo3"  class="Dibujo" onclick="cambiar('h30')">Dibujo <span id="h30">[o]</span></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h2> Tabla para hacer la media </h2>
+		<div>
+			<table style="margin:auto">
+				<tr>
+					<td class="Fisica">Fisica</td>
+					<td><input type="text" id="dato1"/></td>
+				</tr>
+				<tr>
+					<td class="Mate">Matemáticas</td>
+					<td><input type="text" id="dato2"/></td>
+				</tr>
+				<tr>
+					<td class="Lengua">Lengua</td>
+					<td><input type="text" id="dato3"/></td>
+				</tr>
+				<tr>
+					<td class="TI">TI</td>
+					<td><input type="text" id="dato4"/></td>
+				</tr>
+				<tr>
+					<td class="Ingles">Inglés</td>
+					<td><input type="text" id="dato5"/></td>
+				</tr>
+				<tr>
+					<td class="Dibujo">Dibujo</td>
+					<td><input type="text" id="dato6"/></td>
+				</tr>
+				<tr>
+					<td class="TIC">TIC</td>
+					<td><input type="text" id="dato7"/></td>
+				</tr>
+				<tr>
+					<td class="Historia">Historia</td>
+					<td><input type="text" id="dato8"/></td>
+				</tr>
+				<tr>
+					<td><button onclick="media()">HACER MEDIA</button></td>
+					<td><span type="text" id="resultado"/></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<br>
+		<br>
+	</body>
+</html>

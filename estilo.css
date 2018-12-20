@@ -1,0 +1,68 @@
+/*El estilo empieza determinando como van a ser algunas de las 
+etiquetas básicas de html (body,table,td...)*/
+
+body{
+	text-align: center;
+	font-size: 12px;
+}
+table{
+	border: 1px solid black;
+	font-size: 14px;
+	border-radius: 5px;
+	background-color:white;
+}
+td{
+	cursor:pointer;
+	border: 1px solid black;
+	font-size: 14px;
+	border-radius: 5px;
+}
+td:hover{                            /*"Hover" hace que cuando el ratón esté sobre el <span>(en este caso) la palabra se subraye(text-decoration:underline;)*/
+	text-decoration:underline;
+}
+span{
+	font-weight:bold;
+	color:0F0303;
+}
+tr{
+	border: 1px solid black;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+
+/*A partir de aqui el estilo se organiza por clases , una para los dias , otra para el recreo , y el resto por asignaturas*/
+
+.dias{
+	color:blue;	
+	background-color: lightGray;
+}
+.Fisica{
+	background-color: #5858FA;
+}
+.TIC{
+	background-color: #FAAC58;
+}
+.TI{
+	background-color: #D8D8D8;
+}
+.Lengua{
+	background-color:#2ECCFA;
+}
+.Ingles{
+	background-color: #82FA58;
+}
+.Historia{
+	background-color: #9F81F7;
+}
+.Dibujo{
+	background-color: #F3F781;
+}
+.recreo{
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+}
+   .Mate{
+	background-color: #F78181;
+}
